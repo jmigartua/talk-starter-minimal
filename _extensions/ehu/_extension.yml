@@ -1,0 +1,13 @@
+title: "Thermomat Brand Pack (minimal)"
+author: "Thermomat / UPV-EHU"
+version: "0.3.0"
+quarto-required: ">=1.6.0"
+
+contributes:
+  project:
+    resources:
+      - styles/brand-core.css
+      - images/logo-small.svg
+      - images/logo-medium.svg
+      - images/logo-large.svg
+      - fonts/

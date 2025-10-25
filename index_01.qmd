@@ -1,0 +1,56 @@
+---
+title: "Reveal.js Archetypes Template"
+subtitle: "Profile-switched brands; shared palette utilities"
+format:
+  revealjs:
+    theme: [default, styles.scss]
+    slide-number: true
+    transition: fade
+    transition-speed: default
+    background-color: "#ffffff"
+---
+
+## Hero Title {.hero-slide}
+### Optional subtitle with a concise message {.subtitle}
+
+::: {.columns}
+::: {.column width="60%"}
+This starter demonstrates **brand switching** by profile (Posit, EHU-EU, EHU-ES) while **colors and utilities** come from a single core CSS.
+
+[Mint]{.chip .bg-mint} [Coral]{.chip .bg-coral} [Lavender]{.chip .bg-lavender}
+:::
+::: {.column width="40%"}
+![](_extensions/thermomat/ehu/images/logo-medium.svg){width=80%}
+:::
+:::
+
+## Benefits
+
+::: {.columns}
+::: {.column width="35%"}
+Use this area for brief context or keep it empty.
+:::
+::: {.column width="65%"}
+::: {.conclusion-block .fragment}
+[**UNLIMITED** — number of application outputs]{.mint}
+:::
+::: {.conclusion-block .fragment}
+[**< 2 hours** — from instantiation to deployment]{.chartreuse}
+:::
+:::
+:::
+
+## Language families
+**Basque-first**: *Zazpi etxez etxe ibili eta zazpiak zazpietan harrapatu zituen zitzuan.* {.eu}
+
+**Spanish-first**: *Benjamín pidió una bebida de kiwi y fresa; Noé, sin vergüenza, la más exquisita chufa.* {.es}
+
+## How to switch skins
+
+Render with one of the profiles:
+
+- Posit: `quarto preview --profile posit`
+- EHU EU: `quarto preview --profile ehu-eu`
+- EHU ES: `quarto preview --profile ehu-es`
+
+*(Copy your Inter variable files and EHU font files into the folders under `_extensions/thermomat/ehu/fonts/…` for full fidelity.)*

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0.5" y="0.5" width="1279" height="719" fill="#f5f5f5" stroke="#e0e0e0"/>
+  <g font-family="Inter, Arial, sans-serif" font-size="40" fill="#666" text-anchor="middle">
+    <text x="640.0" y="350.0">CLOSING 16:9</text>
+    <text x="640.0" y="388.0" font-size="32">Replace with your image</text>
+  </g>
+</svg>

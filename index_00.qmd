@@ -1,0 +1,141 @@
+---
+title: "Reveal.js Archetypes Template"
+subtitle: "Six reusable slide layouts (Quarto)"
+format:
+  revealjs:
+    theme: [default, styles.scss]
+    slide-number: true
+    transition: fade
+    transition-speed: default
+    background-color: "#ffffff"
+---
+
+
+<!-- A1. HERO IMAGE: Title + subtitle, full-width image below -->
+## Hero Title {.hero-slide}
+### Optional subtitle with a concise message {.subtitle}
+
+![](images/hero-16x9.svg){.hero-img}
+
+<!-- Authoring: Replace the SVG with your own 16:9 image. The container
+     scales to ~70vh to keep the header readable. -->
+
+
+<!-- A2. FIGURE LEFT — MESSAGE RIGHT (headline + bullets) -->
+## Key Idea
+
+::: columns
+::: {.column width="45%"}
+![](images/figure-left-4x5.svg){.fig-left}
+:::
+::: {.column width="55%"}
+### Headline message {.tight}
+- First supporting point (keep it crisp). {.fragment}
+- Second supporting point (2–6 words). {.fragment}
+- Third supporting point (avoid paragraphs). {.fragment}
+:::
+:::
+
+<!-- Authoring: Image on the left; right column reveals bullets sequentially. -->
+
+
+<!-- A3. FIGURE LEFT — STACKED CALLOUT RECTANGLES ON THE RIGHT -->
+## Key Takeaways
+
+::: columns
+::: {.column width="40%"}
+![](images/diagram-4x5.svg){.fig-left}
+:::
+::: {.column width="60%"}
+::: {.callout-card .fragment}
+**Unified Environment**  
+Reduced friction via centralized storage and harmonized directories.
+:::
+::: {.callout-card .fragment}
+**Config-Driven Apps**  
+Study apps instantiated from YAML + plug-and-play datasets.
+:::
+::: {.callout-card .fragment}
+**Governance & Support**  
+Shared responsibility plus SDLC-aligned core package.
+:::
+:::
+:::
+
+<!-- A4. CONTINUATION OF A3 (same structure, new cards) -->
+## More Takeaways (Continuation)
+
+::: columns
+::: {.column width="40%"}
+![](images/diagram-variant-4x5.svg){.fig-left}
+:::
+::: {.column width="60%"}
+::: {.callout-card .fragment}
+**Interoperability**  
+SAS↔R coexist under a unified review surface.
+:::
+::: {.callout-card .fragment}
+**Reproducibility**  
+Version-pinned environments and auditable builds.
+:::
+::: {.callout-card .fragment}
+**Scalability**  
+One parent → many child apps via configuration.
+:::
+:::
+:::
+
+
+<!-- A5. CONCLUSIONS AS HIGH-CONTRAST BLOCKS (RIGHT) -->
+## Benefits
+
+::: columns
+::: {.column width="35%"}
+Use this area for brief context or keep it empty.
+:::
+::: {.column width="65%"}
+::: {.conclusion-block .fragment}
+[**UNLIMITED** — number of application outputs]{style="color:white;"}
+
+::: {style="text-align: right"}
+[***text***]{style="color:red;" }
+:::
+
+[***text***]{style="color:red;" }
+:::
+::: {.conclusion-block .fragment}
+[**< 2 hours** — from instantiation to deployment]{.mint}
+
+[**< 2 hours** — from instantiation to deployment]{style="color:red;" }
+:::
+::: {.conclusion-block .fragment}
+**Review efficiency** — faster decision-making
+:::
+::: {.conclusion-block .fragment}
+**Up-versioning & visibility** — progress seen by stakeholders
+:::
+:::
+:::
+
+
+<!-- A6. CLOSING / CREDITS (AUTHORS LEFT — IMAGE RIGHT) -->
+## Thank you!
+
+::: columns
+::: {.column width="45%"}
+**FIRSTNAME LASTNAME**  
+first.last@your.org
+
+**SECOND AUTHOR**  
+second.author@your.org
+
+**THIRD AUTHOR**  
+third.author@your.org
+
+**FOURTH AUTHOR**  
+fourth.author@your.org
+:::
+::: {.column width="55%"}
+![](images/closing-16x9.svg){.closing-img}
+:::
+:::

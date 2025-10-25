@@ -1,0 +1,19 @@
+meta:
+  name: "Thermomat · Standard"
+  description: "System sans with shared color utilities."
+logo:
+  small: images/logo-small.svg
+  medium: images/logo-medium.svg
+  large: images/logo-large.svg
+
+typography:
+  base:
+    family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+    size: 34px
+    line-height: 1.35
+  headings:
+    family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+    weight: 700
+  monospace:
+    family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+    size: 0.9em

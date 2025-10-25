@@ -1,0 +1,19 @@
+meta:
+  name: "UPV/EHU — EU (Basque-first)"
+  description: "EHUSerif-first; shared color utilities."
+logo:
+  small: images/logo-small.svg
+  medium: images/logo-medium.svg
+  large: images/logo-large.svg
+
+typography:
+  base:
+    family: "EHUSerif"
+    size: 34px
+    line-height: 1.35
+  headings:
+    family: "EHUSerif"
+    weight: 800
+  monospace:
+    family: "JetBrains Mono"
+    size: 0.9em

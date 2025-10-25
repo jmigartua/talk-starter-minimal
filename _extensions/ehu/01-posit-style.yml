@@ -1,0 +1,19 @@
+meta:
+  name: "Thermomat · Posit style (Inter)"
+  description: "Inter typography; colors/utilities from core CSS."
+logo:
+  small: images/logo-small.svg
+  medium: images/logo-medium.svg
+  large: images/logo-large.svg
+
+typography:
+  base:
+    family: "Inter"
+    size: 34px
+    line-height: 1.35
+  headings:
+    family: "Inter"
+    weight: 600
+  monospace:
+    family: "JetBrains Mono"
+    size: 0.9em

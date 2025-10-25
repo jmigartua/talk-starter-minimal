@@ -1,0 +1,23 @@
+project:
+  type: website
+extensions:
+  - _extensions/thermomat/ehu
+
+profile:
+  group:
+    - [standard, posit, ehu-eu, ehu-es]
+  default: posit
+
+format:
+  revealjs:
+    theme: [default, styles.scss]
+    slide-number: true
+    hash: true
+    transition: fade
+    transition-speed: fast
+    background-color: "#ffffff"
+    width: 1600
+    height: 900
+    css:
+      - _extensions/thermomat/ehu/styles/brand-core.css
+      - styles/styles.scss

@@ -1,3 +1,68 @@
 /*-- scss:defaults --*/
-/* local project tweaks (optional) */
-.reveal section h2 { letter-spacing: -0.01em; }
+
+
+/* --- New Custom Components (High Specificity Version) --- */
+
+/* Use for highlighting a central question, hypothesis, or a point for discussion. */
+.reveal .slides .hypothesis-block {
+  background: var(--bs-body-bg, #fff); /* Adapts to light/dark themes */
+  border-left: 4px solid #4774c4; /* A neutral, academic blue */
+  padding: 12px 18px;
+  margin: 1em 0;
+  font-style: italic;
+  text-align: left; /* Ensure alignment is correct */
+  border-radius: 4px;
+}
+
+/* A container for a two-column pros and cons list. */
+.reveal .slides .pros-cons-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  /* Style for list items within the container */
+  ul {
+    list-style-type: none;
+    padding-left: 1.2em !important; // Use !important to override theme defaults if needed
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+  }
+
+  li::before {
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    font-weight: bold;
+  }
+  
+  /* Style for 'pros' column items */
+  .pros li::before {
+    content: "+";
+    color: #28a745; /* Green for pros */
+  }
+
+  /* Style for 'cons' column items */
+  .cons li::before {
+    content: "–";
+    color: #dc3545; /* Red for cons */
+  }
+}
+
+/* A simple, clean block for defining a key term or variable. */
+.reveal .slides .key-definition {
+  border-top: 1px solid var(--col-gray-2, #ddd);
+  border-bottom: 1px solid var(--col-gray-2, #ddd);
+  padding: 14px 0;
+  margin: 0 0 12px 0;
+  text-align: left; /* Ensure alignment */
+
+  /* Defines the term being explained */
+  strong {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+  }
+}

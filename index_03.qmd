@@ -1,0 +1,194 @@
+---
+title: "Visually Integrated Template Kit"
+format: revealjs
+---
+
+
+## Template 7: The Section Divider
+
+A clean slide to introduce a new major section of the talk.
+
+---
+
+## Next Section {background-color="#de7070ff"}
+
+<!-- This template is intentionally minimal and does not require images or special components. -->
+
+---
+
+## Template 8: The Quote
+
+Features a powerful quote, now using the `.hypothesis-block` for visual emphasis.
+
+---
+
+::: {.hypothesis-block background-color="#de7070ff"}
+The essence of minimalism is to prioritize the essential. In science, this means focusing on the clarity of the idea.
+:::
+
+::: footer
+— Author Name, Publication (Year)
+:::
+
+---
+
+## Template 9: The Definition
+
+Uses the new `.key-definition` component for a clean, structured look.
+
+---
+
+## Key Term
+
+::: {.columns}
+::: {.column width="30%"}
+<!-- Intentionally blank for asymmetrical balance -->
+:::
+
+::: {.column width="70%"}
+
+::: {.key-definition}
+**Term:** A concise, primary definition (5-10 words).
+:::
+
+::: {.key-definition .fragment}
+**Example:** A clarifying characteristic or example.
+:::
+
+::: {.key-definition .fragment}
+**Context:** How it applies in this context.
+:::
+
+:::
+:::
+
+---
+
+## Template 10: The Comparison
+
+Uses the new `.pros-cons-list` and your `diagram-variant-4x5.svg` for a head-to-head visual comparison.
+
+---
+
+## Comparison
+
+::: {.pros-cons-list}
+::: {.pros}
+**Concept A**
+![Concept A Diagram](images/diagram-variant-4x5.svg){fig-align="center" width="200"}
+-   Key advantage one
+-   Positive characteristic two
+:::
+
+::: {.cons}
+**Concept B**
+![Concept B Diagram](images/diagram-variant-4x5.svg){fig-align="center" width="200"}
+-   Key drawback one
+-   Negative characteristic two
+:::
+:::
+
+---
+
+## Template 11: The Data Visualization
+
+Directly uses your `figure-left-4x5.svg` asset, following the layout of your original slides.
+
+---
+
+## Key Finding from Data
+
+::: {.columns}
+::: {.column width="50%"}
+![Placeholder for a data figure](images/figure-left-4x5.svg){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+### Interpretation
+
+-   The primary observation. {.fragment}
+-   The implication of this observation. {.fragment}
+
+::: {.callout-card .fragment}
+**Note:** This data point is statistically significant (p < 0.05).
+:::
+
+::: {.conclusion-block .fragment}
+**Note:** This data point is statistically significant (p < 0.05).
+:::
+:::
+:::
+
+---
+
+## Template 12: The Process/Timeline
+
+A minimalist horizontal flow diagram.
+
+---
+
+## Methodology
+
+
+
+::: {.columns .items-center}
+::: {.column width="25%" .text-center}
+**1. Data Collection** <br> {.chip} `Phase 1`
+:::
+
+::: {.column width="10%" .text-center}
+#### →
+:::
+
+::: {.column width="25%" .text-center}
+**2. Analysis** <br> {.chip} `Phase 2`
+:::
+
+::: {.column width="10%" .text-center}
+#### →
+:::
+
+::: {.column width="25%" .text-center}
+**3. Conclusion** <br> {.chip} `Phase 3`
+:::
+:::
+
+---
+
+## Template 13: The Summary
+
+Uses your powerful `.conclusion-block` to reinforce the final takeaways.
+
+---
+
+## Summary
+
+::: {.conclusion-block .fragment}
+**Conclusion 1:** The most important conclusion from our findings.
+:::
+
+::: {.conclusion-block .fragment}
+**Conclusion 2:** A second, critical insight derived from the data.
+:::
+
+::: {.conclusion-block .fragment}
+**Next Step:** The future implication or the next research step.
+:::
+
+---
+
+## Template 14: Q&A / Contact
+
+A clean, professional closing slide using your `closing-16x9.svg` as a subtle background.
+
+---
+
+## Questions? {background-image="images/closing-16x9.svg" background-size="cover"}
+
+<br>
+
+Your Name / Your Institution
+
+email@domain.edu
+
+@SocialMediaHandle

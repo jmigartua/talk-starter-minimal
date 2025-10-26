@@ -6,7 +6,7 @@ extensions:
 profile:
   group:
     - [standard, posit, ehu-eu, ehu-es]
-  default: posit
+  default: ehu-eu
 
 format:
   revealjs:

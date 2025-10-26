@@ -11,6 +11,7 @@ format:
 ---
 
 
+
 <!-- A1. HERO IMAGE: Title + subtitle, full-width image below -->
 ## Hero Title {.hero-slide}
 ### Optional subtitle with a concise message {.subtitle}
@@ -30,9 +31,11 @@ format:
 :::
 ::: {.column width="55%"}
 ### Headline message {.tight}
-- First supporting point (keep it crisp). {.fragment}
-- Second supporting point (2–6 words). {.fragment}
-- Third supporting point (avoid paragraphs). {.fragment}
+::: {.incremental}
+- First supporting point (keep it crisp).
+- Second supporting point (2–6 words).
+- Third supporting point (avoid paragraphs).
+:::
 :::
 :::
 

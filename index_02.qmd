@@ -1,0 +1,173 @@
+---
+title: "Expanded Template Kit"
+format: revealjs
+---
+
+## Template 7: The Section Divider
+
+A slide to introduce a new major section of the talk.
+
+---
+
+## Next Section {background-color="#FFFFFF"}
+
+---
+
+## Template 8: The Quote
+
+To feature a powerful or foundational quote.
+
+---
+
+> The essence of minimalism is to prioritize the essential. In science, this means focusing on the clarity of the idea.
+
+::: footer
+— Author Name, Publication (Year)
+:::
+
+---
+
+## Template 9: The Definition
+
+To clearly and concisely define a key term.
+
+---
+
+## Key Term
+
+::: {.columns}
+::: {.column width="30%"}
+<!-- This column is intentionally left blank to create an asymmetrical layout. -->
+<!-- The H1 "Key Term" serves as the title for this slide. -->
+:::
+
+::: {.column width="70%"}
+### Core Concept
+
+-   A concise, primary definition (5-10 words). {.fragment}
+-   A clarifying characteristic or example. {.fragment}
+-   How it applies in this context. {.fragment}
+:::
+:::
+
+---
+
+## Template 10: The Comparison
+
+To compare and contrast two ideas head-to-head.
+
+---
+
+## Comparison
+
+::: {.columns}
+::: {.column width="50%"}
+### Concept A
+
+-   Characteristic one {.fragment}
+-   Characteristic two {.fragment}
+-   Characteristic three {.fragment}
+:::
+
+::: {.column width="50%"}
+### Concept B
+
+-   Corresponding characteristic one {.fragment}
+-   Corresponding characteristic two {.fragment}
+-   Corresponding characteristic three {.fragment}
+:::
+:::
+
+---
+
+## Template 11: The Data Visualization
+
+To present a single graph with a key takeaway.
+
+---
+
+## Key Finding from Data
+
+::: {.columns}
+::: {.column width="60%"}
+<div class="r-stack">
+  <img src="placeholder.svg" alt="Placeholder for a chart or graph." class="fragment">
+  <div class="fragment" style="background-color: rgba(224, 224, 224, 0.8); padding: 10px; border-radius: 5px;">
+    FIGURE 6:2<br>*Insert your graph or chart*
+  </div>
+</div>
+:::
+
+::: {.column width="40%"}
+### Interpretation
+
+-   The primary observation. {.fragment}
+-   The implication of this observation. {.fragment}
+:::
+:::
+
+---
+
+## Template 12: The Process/Timeline
+
+To illustrate a sequence of steps or a timeline.
+
+---
+
+## Methodology
+
+<br>
+
+::: {.columns .items-center}
+::: {.column width="25%" .text-center}
+**1. First Step**
+:::
+
+::: {.column width="10%" .text-center}
+→
+:::
+
+::: {.column width="25%" .text-center}
+**2. Second Step**
+:::
+
+::: {.column width="10%" .text-center}
+→
+:::
+
+::: {.column width="25%" .text-center}
+**3. Final Step**
+:::
+:::
+
+---
+
+## Template 13: The Summary
+
+To conclude a section by reinforcing critical points.
+
+---
+
+## Summary
+
+-   The most important conclusion. {.fragment}
+-   A second, critical finding. {.fragment}
+-   The future implication or next step. {.fragment}
+
+---
+
+## Template 14: Q&A / Contact
+
+A final slide for questions and contact information.
+
+---
+
+## Questions? {transition="fade"}
+
+<br>
+
+Your Name / Institution
+
+email@domain.edu
+
+@SocialMediaHandle

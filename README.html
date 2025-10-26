@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>readme</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="README_files/libs/clipboard/clipboard.min.js"></script>
+<script src="README_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="README_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="README_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="README_files/libs/quarto-html/popper.min.js"></script>
+<script src="README_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="README_files/libs/quarto-html/anchor.min.js"></script>
+<link href="README_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="README_files/libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="README_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="README_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="README_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="talk-starter-minimal" class="level1">
+<h1>Talk Starter · Minimal</h1>
+<p><em>A Quarto + reveal.js starter for academic and scientific talks with multi-brand profiles</em></p>
+<p>This repository provides a <strong>minimal, reproducible slide deck scaffold</strong> for teaching, seminars, and research presentations built on <strong>Quarto</strong> and <strong>reveal.js</strong>. It includes <strong>multiple brand profiles</strong> (e.g., <code>posit</code>, <code>ehu-eu</code>, <code>ehu-es</code>) that share a <strong>common color palette</strong>, while each profile selects its own font families/weights. Slides render locally with <code>quarto preview --profile &lt;name&gt;</code> and require <strong>Quarto ≥ 1.6</strong>. The project expects local font files (Inter + EHU Sans/Serif) and centralizes color utilities and <code>@font-face</code> rules in <code>brand-core.css</code>. (<a href="https://github.com/jmigartua/talk-starter-minimal" title="GitHub - jmigartua/talk-starter-minimal">GitHub</a>)</p>
+<hr>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#talk-starter--minimal">Talk Starter · Minimal</a>
+<ul>
+<li><a href="#table-of-contents">Table of contents</a></li>
+<li><a href="#1-rationale-and-audience">1. Rationale and audience</a></li>
+<li><a href="#2-requirements">2. Requirements</a></li>
+<li><a href="#3-quick-start">3. Quick start</a></li>
+<li><a href="#4-repository-structure">4. Repository structure</a></li>
+<li><a href="#5-profiles--branding">5. Profiles &amp; branding</a></li>
+<li><a href="#6-authoring-model-quarto--revealjs">6. Authoring model (Quarto + reveal.js)</a></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="rationale-and-audience" class="level2">
+<h2 class="anchored" data-anchor-id="rationale-and-audience">1. Rationale and audience</h2>
+<p>This starter emphasizes <strong>high legibility, minimal ornamentation, and assertion–evidence rhetoric</strong> for STEM audiences—typical of lectures, research talks, and defenses. In assertion–evidence design, each slide advances a short <strong>claim</strong> (headline) supported by <strong>visual or textual evidence</strong> (figure, equation, table, or brief block). The approach is well-documented to improve understanding and recall in technical presentations and has been widely adopted in academic contexts. (<a href="https://www.assertion-evidence.com/?utm_source=chatgpt.com" title="The assertion-evidence approach will make your talks more ...">assertion-evidence.com</a>)</p>
+<p>The layout and defaults also reflect research on <strong>multimedia learning</strong> and <strong>cognitive load</strong>: coherence (removing extraneous material), signaling (cueing structure), and spatial/temporal contiguity (placing text near corresponding visuals; pacing with fragments). (<a href="https://www.cambridge.org/core/books/cambridge-handbook-of-multimedia-learning/principles-for-reducing-extraneous-processing-in-multimedia-learning-coherence-signaling-redundancy-spatial-contiguity-and-temporal-contiguity-principles/CD5B7AE1279A9AB81F8EEBB53DBEC86E?utm_source=chatgpt.com" title="12 - Principles for Reducing Extraneous Processing in ...">Cambridge University Press &amp; Assessment</a>)</p>
+<hr>
+</section>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">2. Requirements</h2>
+<ul>
+<li><strong>Quarto</strong> ≥ <strong>1.6</strong> (CLI + your preferred editor). (<a href="https://github.com/jmigartua/talk-starter-minimal" title="GitHub - jmigartua/talk-starter-minimal">GitHub</a>)</li>
+<li>Modern browser (Chrome/Firefox/Edge/Safari) for local preview of reveal.js decks.</li>
+<li>Optional fonts (see §5): <strong>Inter</strong> variable, <strong>EHU Sans</strong>, <strong>EHU Serif</strong>. (<a href="https://github.com/jmigartua/talk-starter-minimal" title="GitHub - jmigartua/talk-starter-minimal">GitHub</a>)</li>
+</ul>
+<p>Helpful references: Quarto projects, reveal.js format, and shortcodes/meta. (<a href="https://quarto.org/docs/projects/quarto-projects.html?utm_source=chatgpt.com" title="Project Basics">Quarto</a>)</p>
+<hr>
+</section>
+<section id="quick-start" class="level2">
+<h2 class="anchored" data-anchor-id="quick-start">3. Quick start</h2>
+<ol type="1">
+<li><strong>Clone</strong> or download this repository.</li>
+<li><strong>Install fonts</strong> (optional but recommended): place files at the paths below (see §5). (<a href="https://github.com/jmigartua/talk-starter-minimal" title="GitHub - jmigartua/talk-starter-minimal">GitHub</a>)</li>
+<li><strong>Preview</strong> a brand/profile (pick one):</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview <span class="at">--profile</span> posit    <span class="co"># Inter (Posit-like)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview <span class="at">--profile</span> ehu-eu   <span class="co"># EHUSerif-first (Basque-first)</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview <span class="at">--profile</span> ehu-es   <span class="co"># EHUSans-first (Spanish-first)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The README index text, profile names, and preview commands are defined in this repository. (<a href="https://github.com/jmigartua/talk-starter-minimal" title="GitHub - jmigartua/talk-starter-minimal">GitHub</a>)</p>
+<hr>
+</section>
+<section id="repository-structure" class="level2">
+<h2 class="anchored" data-anchor-id="repository-structure">4. Repository structure</h2>
+<p>At a glance (top-level):</p>
+<pre><code>_extensions/                 # brand and utility assets (fonts, brand-core.css, etc.)
+images/                      # example images for slides
+styles/                      # additional CSS helpers (if any)
+index_00.qmd, index_01.qmd, index_02.qmd, index_03.qmd  # sample decks
+_quarto.yml                  # base project config
+_quarto-posit.yml            # Posit-branded profile
+_quarto-ehu-eu.yml           # EHU Basque-first profile
+_quarto-ehu-es.yml           # EHU Spanish-first profile
+_quarto-standard.yml         # a standard/neutral profile
+styles.scss                  # project styles entry-point
+README.md</code></pre>
+<p>See the repository’s file list for the canonical, up-to-date structure. (<a href="https://github.com/jmigartua/talk-starter-minimal" title="GitHub - jmigartua/talk-starter-minimal">GitHub</a>)</p>
+<hr>
+</section>
+<section id="profiles-branding" class="level2">
+<h2 class="anchored" data-anchor-id="profiles-branding">5. Profiles &amp; branding</h2>
+<p>This starter uses <strong>Quarto project profiles</strong> so a single source can render under multiple “skins.” Profiles selectively change typography while <strong>sharing a common color palette</strong> and utilities. All <code>@font-face</code> rules and color helpers live in:</p>
+<pre><code>_extensions/thermomat/ehu/styles/brand-core.css</code></pre>
+<p>Each brand profile YAML selects <strong>families/weights</strong>; <strong>colors are shared across skins</strong>, so decks remain visually consistent across profiles. Expected font file locations:</p>
+<pre><code>Inter variable: _extensions/thermomat/ehu/fonts/Inter/Inter-Variable.woff2 (+ italic)
+EHUSans:        _extensions/thermomat/ehu/fonts/EHU_Sans/...
+EHUSerif:       _extensions/thermomat/ehu/fonts/EHU_Serif/...</code></pre>
+<p>(Place your licensed/authorized files at those paths.) (<a href="https://github.com/jmigartua/talk-starter-minimal" title="GitHub - jmigartua/talk-starter-minimal">GitHub</a>)</p>
+<p>For background on <strong>profiles</strong> in Quarto, see the official documentation. (<a href="https://quarto.org/docs/projects/profiles.html?utm_source=chatgpt.com" title="Project Profiles">Quarto</a>)</p>
+<hr>
+</section>
+<section id="authoring-model-quarto-reveal.js" class="level2">
+<h2 class="anchored" data-anchor-id="authoring-model-quarto-reveal.js">6. Authoring model (Quarto + reveal.js)</h2>
+<ul>
+<li><strong>Format</strong>: Slides are written in <code>.qmd</code> using <strong>Quarto’s</strong> <code>revealjs</code> output. (<a href="https://quarto.org/docs/presentations/revealjs/?utm_source=chatgpt.com" title="Revealjs">Quarto</a>)</li>
+<li><strong>Reusable content</strong>: Prefer Quarto <strong>includes</strong> and the <strong><code>meta</code></strong> shortcode to pass per-slide variables into partials, enabling clean, parameterized templates without duplication. (<a href="https://quarto.org/docs/authoring/includes.html?utm_source=chatgpt.com" title="Includes">Quarto</a>)</li>
+</ul>
+<p><strong>Pattern: include + meta</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">slide:</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">  title:    "Key assertion (≤ 12 words)"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">  figure:   "/images/example.png"</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">  alt:      "Description for screen readers"</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">  caption:  "Short, adjacent caption"</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">  text:     "Evidence in ~40–70 words."</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">  fragments: true</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>{{&lt; include /templates/_concept-with-diagram.qmd &gt;}}</code></p>
+<ul>
+<li><code>{{&lt; include ... &gt;}}</code> brings in a partial; <code>?meta:slide.key</code> reads values from the document metadata. :contentReference<span data-index="13">oaicite:13</span></li>
+</ul>
+<hr>
+</section>
+<section id="progressive-disclosure-fragments" class="level2">
+<h2 class="anchored" data-anchor-id="progressive-disclosure-fragments">7. Progressive disclosure (fragments)</h2>
+<p>For pacing, <strong>reveal.js fragments</strong> incrementally reveal elements marked with the <code>fragment</code> class (e.g., figures, paragraphs, equations). This supports <strong>segmenting</strong> and reduces extraneous processing for learners. :contentReference<span data-index="14">oaicite:14</span></p>
+<ul>
+<li>Reveal.js fragments reference: official docs. :contentReference<span data-index="15">oaicite:15</span><br>
+</li>
+<li>Quarto’s advanced reveal docs (fragments &amp; incremental display). :contentReference<span data-index="16">oaicite:16</span><br>
+</li>
+<li>Small demo of fragment styles in Quarto’s examples. :contentReference<span data-index="17">oaicite:17</span></li>
+</ul>
+<hr>
+</section>
+<section id="accessibility-baseline" class="level2">
+<h2 class="anchored" data-anchor-id="accessibility-baseline">8. Accessibility baseline</h2>
+<p>This starter aims for <strong>WCAG 2.x color contrast</strong>: at least <strong>4.5:1</strong> for normal text and <strong>3:1</strong> for large text (AA), with <strong>7:1</strong> / <strong>4.5:1</strong> targets (AAA) where feasible. The shared palette in <code>brand-core.css</code> and conservative typography help meet these thresholds; you should still validate figures/captions against complex image backgrounds. :contentReference<span data-index="18">oaicite:18</span></p>
+<hr>
+</section>
+<section id="printingexport-to-pdf" class="level2">
+<h2 class="anchored" data-anchor-id="printingexport-to-pdf">9. Printing/Export to PDF</h2>
+<p>Reveal.js supports a <strong>print view</strong> suitable for PDF export; in Quarto preview, use the print view and your browser’s “Save as PDF” with <strong>Landscape</strong>, <strong>No margins</strong>, and <strong>Background graphics</strong> enabled. You can also append <code>?print-pdf</code> to the deck URL. For fully automated workflows, tools like <strong>Decktape</strong> (headless Chrome) are popular. :contentReference<span data-index="19">oaicite:19</span></p>
+<hr>
+</section>
+<section id="optional-extended-slide-templates" class="level2">
+<h2 class="anchored" data-anchor-id="optional-extended-slide-templates">10. Optional: Extended slide templates</h2>
+<p>If you wish to expand beyond the baseline sample decks, you can add a <strong>parameterized template set</strong> (e.g., reusable Quarto partials for equations, diagrams, proofs, comparisons, pipelines, timelines, assignments, polls, etc.). The recommended integration patterns are:</p>
+<ul>
+<li><strong>Local include</strong>: place partials under <code>/templates</code> and include them with <code>{{&lt; include /templates/_name.qmd &gt;}}</code> (then provide values via <code>slide:</code> metadata as in §6). :contentReference<span data-index="20">oaicite:20</span><br>
+</li>
+<li><strong>As an extension</strong>: place a directory under <code>/_extensions/&lt;org&gt;/&lt;name&gt;</code> and manage via <code>quarto add|list|update</code>. Extensions are <strong>project-local</strong>; no global install is required. :contentReference<span data-index="21">oaicite:21</span></li>
+</ul>
+<p>To scaffold a shortcode-based extension (so authors can write <code>{{&lt; slide-equation eq="..." &gt;}}</code>), see <strong>“Creating Shortcodes.”</strong> :contentReference<span data-index="22">oaicite:22</span></p>
+<hr>
+</section>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">11. Troubleshooting</h2>
+<ul>
+<li><p><strong>Fonts not applying / fallbacks</strong><br>
+Ensure Inter/EHU fonts are installed at the expected paths under <code>_extensions/thermomat/ehu/fonts/...</code>. Check the browser dev tools → <strong>Network</strong> for 404s; verify <code>brand-core.css</code> is loaded. :contentReference<span data-index="23">oaicite:23</span></p></li>
+<li><p><strong>Fragments not stepping</strong><br>
+Confirm that elements have class <code>fragment</code>. See reveal.js fragment guide for valid modifiers and behaviors. :contentReference<span data-index="24">oaicite:24</span></p></li>
+<li><p><strong>Includes show literal <code>{{&lt; include ... &gt;}}</code></strong><br>
+You may be previewing with a non-Quarto pipeline. Render/preview with <code>quarto</code> and ensure the include path is correct (absolute from project root is safest). :contentReference<span data-index="25">oaicite:25</span></p></li>
+<li><p><strong>Multiple brands / profiles</strong><br>
+Render with an explicit profile: <code>quarto preview --profile ehu-eu</code>. See Quarto profiles reference. :contentReference<span data-index="26">oaicite:26</span></p></li>
+<li><p><strong>PDF export quality</strong><br>
+Use reveal’s print view with browser settings recommended in §9. For CI or fully automated export, adopt Decktape/Playwright. :contentReference<span data-index="27">oaicite:27</span></p></li>
+</ul>
+<hr>
+</section>
+<section id="contributing" class="level2">
+<h2 class="anchored" data-anchor-id="contributing">12. Contributing</h2>
+<p>Contributions are welcome (issues, discussions, or PRs) for:</p>
+<ul>
+<li>layout refinements that preserve minimalism and legibility,<br>
+</li>
+<li>accessibility improvements (contrast, alt text patterns, keyboard navigation),<br>
+</li>
+<li>additional profiles that <strong>re-use</strong> the shared palette while swapping families/weights,<br>
+</li>
+<li>teaching-focused partials/templates that implement assertion–evidence slides and gentle fragment pacing.</li>
+</ul>
+<p>Please keep changes <strong>small and well-scoped</strong>, and accompany them with a short rationale.</p>
+<hr>
+</section>
+<section id="license" class="level2">
+<h2 class="anchored" data-anchor-id="license">13. License</h2>
+<p>As of this writing, the repository <strong>does not include a LICENSE file</strong>. Absent a license, the default legal position is <strong>exclusive copyright (“all rights reserved”)</strong>: others may <em>view</em> the code but <strong>do not have permission to use, modify, or redistribute</strong> it. If your intent is to permit reuse, please add an explicit license (e.g., MIT, BSD-3-Clause, Apache-2.0, CC BY for non-code assets, or a public-domain dedication like CC0/Unlicense). :contentReference<span data-index="28">oaicite:28</span></p>
+<hr>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li><strong>This repository’s current README and structure (profiles, fonts, brand-core.css; Quarto ≥ 1.6; preview commands).</strong> :contentReference<span data-index="29">oaicite:29</span><br>
+</li>
+<li><strong>Quarto</strong>: projects; reveal.js format; includes; shortcodes/meta; advanced reveal; presenting/print to PDF. :contentReference<span data-index="30">oaicite:30</span><br>
+</li>
+<li><strong>reveal.js</strong>: framework and fragments; PDF export. :contentReference<span data-index="31">oaicite:31</span><br>
+</li>
+<li><strong>Accessibility (contrast)</strong>: WCAG 2.1/2.2 contrast criteria and practical checkers. :contentReference<span data-index="32">oaicite:32</span><br>
+</li>
+<li><strong>Pedagogy</strong>: assertion–evidence approach; multimedia learning principles (coherence, signaling, spatial &amp; temporal contiguity; segmenting). :contentReference<span data-index="33">oaicite:33</span></li>
+</ul>
+<hr>
+<section id="appendix-a.-why-this-starter-works-for-teaching" class="level3">
+<h3 class="anchored" data-anchor-id="appendix-a.-why-this-starter-works-for-teaching">Appendix A. Why this starter works for teaching</h3>
+<ul>
+<li><strong>Assertion–evidence</strong> slides encourage eye contact and reduce on-slide text, making room for figures/equations and lecturer narration. :contentReference<span data-index="34">oaicite:34</span><br>
+</li>
+<li><strong>Fragments</strong> create <strong>paced segments</strong>, aligning with the <strong>segmenting principle</strong> and keeping working memory load in check. :contentReference<span data-index="35">oaicite:35</span><br>
+</li>
+<li><strong>Spatial contiguity</strong> is respected by locating captions close to visuals, avoiding split attention. :contentReference<span data-index="36">oaicite:36</span><br>
+</li>
+<li><strong>Profiles</strong> let you <strong>switch brand typography</strong> without touching content, fostering reuse and consistency across courses and talks. :contentReference<span data-index="37">oaicite:37</span></li>
+</ul>
+<hr>
+</section>
+<section id="appendix-b.-common-tasks" class="level3">
+<h3 class="anchored" data-anchor-id="appendix-b.-common-tasks">Appendix B. Common tasks</h3>
+<ul>
+<li><strong>Create a new website-style project</strong> (optional, for nav across multiple decks):</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create project website myslides</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> myslides</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>(Website projects provide navigation and site-level options in <code>_quarto.yml</code>.) (<a href="https://quarto.org/docs/websites/?utm_source=chatgpt.com" title="Creating a Website">Quarto</a>)</p>
+<ul>
+<li><strong>Manage extensions</strong> locally within a project:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># from the project root</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> add quarto-ext/fontawesome</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> list extensions</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>(Extensions live under <code>./_extensions</code> and are <strong>project-local</strong>.) (<a href="https://quarto.org/docs/extensions/managing.html?utm_source=chatgpt.com" title="Managing Extensions">Quarto</a>)</p>
+<hr>
+<blockquote class="blockquote">
+<p><em>If you would like, I can adapt this README to include a “Templates” section pointing at a curated <code>/templates</code> directory (with example includes) once you add or vend your preferred partials.</em></p>
+</blockquote>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

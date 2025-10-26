@@ -104,8 +104,8 @@ For background on **profiles** in Quarto, see the official documentation. ([Quar
 
 **Pattern: include + meta**
 
-````markdown
-```{=markdown}
+
+```markdown
 ---
 slide:
   title:    "Key assertion (≤ 12 words)"
@@ -115,11 +115,14 @@ slide:
   text:     "Evidence in ~40–70 words."
   fragments: true
 ---
-````
 
-{{< include /templates/_concept-with-diagram.qmd >}}
+```
 
-````
+`{{< include /templates/_concept-with-diagram.qmd >}}`
+
+
+
+
 
 - `{{< include ... >}}` brings in a partial; `{{< meta slide.key >}}` reads values from the document metadata. :contentReference[oaicite:13]{index=13}
 

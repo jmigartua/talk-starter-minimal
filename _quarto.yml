@@ -1,12 +1,15 @@
 project:
   type: website
 extensions:
-  - _extensions/thermomat/ehu
+  - _extensions/thermomat
+  - _extensions/thermomat-dividers
+filters:
+  - _extensions/thermomat-dividers/filters/divider.lua
 
 profile:
   group:
     - [standard, posit, ehu-eu, ehu-es]
-  default: ehu-eu
+  default: standard
 
 format:
   revealjs:
@@ -21,3 +24,4 @@ format:
     css:
       - _extensions/thermomat/ehu/styles/brand-core.css
       - styles/styles.scss
+      - _extensions/thermomat-dividers/dividers.css

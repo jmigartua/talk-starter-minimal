@@ -1,0 +1,48 @@
+:root {
+  --divider-red:     #D7433B;
+  --divider-salmon:  #F06A63;
+  --divider-accent:  #FF8E5E;
+  --divider-saffron: #FFCC3D;
+  --divider-mint:    #95CAA6;
+  --divider-teal:    #008D98;
+
+  --divider-fg-light: #ffffff;
+  --divider-fg-dark:  #111111;
+}
+.reveal .slides section.section-divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0;
+  color: var(--divider-fg-light);
+  text-align: center;
+}
+.reveal .slides section.section-divider > * {
+  margin: 0;
+  max-width: min(75vw, 1200px);
+}
+.reveal .slides section.section-divider h1,
+.reveal .slides section.section-divider h2 {
+  font-size: clamp(4rem, 16vh, 9rem);
+  line-height: 1.05;
+  font-weight: 700;
+  text-align: left;
+  color: inherit; /* ← make the heading obey light-text/dark-text */
+}
+.reveal .slides section.section-divider.dark-text {
+  color: var(--divider-fg-dark);
+}
+.reveal .slides section.section-divider.light-text {
+  color: var(--divider-fg-light);
+}
+.reveal .slides section.ustwo-red { background-color: var(--divider-red); }
+.reveal .slides section.ustwo-salmon { background-color: var(--divider-salmon); }
+.reveal .slides section.title-accent { background-color: var(--divider-accent); }
+.reveal .slides section.ustwo-saffron { background-color: var(--divider-saffron); }
+.reveal .slides section.ustwo-mint { background-color: var(--divider-mint); }
+.reveal .slides section.ustwo-teal { background-color: var(--divider-teal); }

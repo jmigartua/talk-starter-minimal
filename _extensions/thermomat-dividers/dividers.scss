@@ -1,0 +1,31 @@
+:root {
+  --divider-red:     #D7433B;
+  --divider-salmon:  #F06A63;
+  --divider-accent:  #FF8E5E;
+  --divider-saffron: #FFCC3D;
+  --divider-mint:    #95CAA6;
+  --divider-teal:    #008D98;
+
+  --divider-fg-light: #ffffff;
+  --divider-fg-dark:  #111111;
+}
+.reveal .slides section.section-divider {
+  display: grid; place-content: center;
+  text-align: center;
+  color: var(--divider-fg-light);
+  padding: 2rem;
+}
+.reveal .slides section.section-divider h1,
+.reveal .slides section.section-divider h2 {
+  font-size: clamp(4rem, 12vh, 9rem);
+  line-height: 1.05;
+  margin: 0;
+}
+.reveal .slides section.ustwo-red     { background-color: var(--divider-red); }
+.reveal .slides section.ustwo-salmon  { background-color: var(--divider-salmon); }
+.reveal .slides section.title-accent  { background-color: var(--divider-accent); }
+.reveal .slides section.ustwo-saffron { background-color: var(--divider-saffron); color: var(--divider-fg-dark); }
+.reveal .slides section.ustwo-mint    { background-color: var(--divider-mint);    color: var(--divider-fg-dark); }
+.reveal .slides section.ustwo-teal    { background-color: var(--divider-teal); }
+.reveal .slides section.dark-text  { color: var(--divider-fg-dark)  !important; }
+.reveal .slides section.light-text { color: var(--divider-fg-light) !important; }
